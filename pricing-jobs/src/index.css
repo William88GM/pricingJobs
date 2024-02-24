@@ -35,6 +35,7 @@
 
 h1 {
   margin: 30px;
+  text-wrap: balance;
 }
 a {
   font-weight: 500;

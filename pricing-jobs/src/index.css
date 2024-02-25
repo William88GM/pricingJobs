@@ -37,6 +37,9 @@ h1 {
   margin: 30px;
   text-wrap: balance;
 }
+h3 {
+  text-wrap: balance;
+}
 a {
   font-weight: 500;
   color: #646cff;

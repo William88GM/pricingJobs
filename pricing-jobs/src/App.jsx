@@ -17,29 +17,44 @@ function App() {
     otros: false,
   });
 
-  // const titles = {
-  //   diagnostico: "Diagnósito de mi PC 🔍",
-  //   disco: "Cambio de Disco 💿 + Backup de archivos 🗃 + Instalación Windows 🖥",
-  //   limpieza: "Limpieza Física 🧹",
-  //   optimizar: "Optimizacion y rendimiento 🚀",
-  //   office: "Instalacion y activación de Office 👩‍💼👨‍💼",
-  //   windows: "Instalacion y activación de Windows 🖥",
-  //   arquitectura: "Instalacion y activación de Programas Autodesk 📐",
-  //   diseno: "Instalacion y activación de Programas Adobe 🖌",
-  //   antivirus: "Instalacion y activación de Antivirus 👾",
-  //   otros: "Otros: Me gustaría consultarte sobre...🤔",
-  // };
+  //   {
+  //     Diagnósito de mi PC 🔍
+
+  // Cambio de Disco a SSD 💿 + Backup de archivos 🗃 + Instalación Windows 🖥
+
+  // Limpieza Física 🧹 + Optimización 🚀
+
+  // Instalacion y activación de Office 👩‍💼👨‍💼
+
+  // Instalacion y activación de Windows 🖥
+
+  // Instalacion y activación de Programas Autodesk 📐
+
+  // Instalacion y activación de Programas Adobe 🖌
+
+  // Instalacion y activación de Antivirus 👾
+
+  // Otros: Me gustaría consultarte sobre...🤔
+  //   }
+
   const titles = {
-    diagnostico: "Diagnósito de mi PC",
-    disco: "Cambio de Disco  + Backup de archivos  + Instalación Windows ",
-    limpieza: "Limpieza Física + Optimización ",
-    office: "Instalacion y activación de Office ",
-    windows: "Instalacion y activación de Windows ",
-    arquitectura: "Instalacion y activación de Programas Autodesk",
-    diseno: "Instalacion y activación de Programas Adobe ",
-    antivirus: "Instalacion y activación de Antivirus ",
-    otros: "Otros: Me gustaría consultarte sobre...",
+    diagnostico: "Diagn%C3%B3sito%20de%20mi%20PC%20%F0%9F%94%8D",
+    disco:
+      "Cambio%20de%20Disco%20a%20SSD%20%F0%9F%92%BF%20%2B%20Backup%20de%20archivos%20%F0%9F%97%83%20%2B%20Instalaci%C3%B3n%20Windows%20%F0%9F%96%A5",
+    limpieza:
+      "Limpieza%20F%C3%ADsica%20%F0%9F%A7%B9%20%2B%20Optimizaci%C3%B3n%20%F0%9F%9A%80",
+    office:
+      "Instalacion%20y%20activaci%C3%B3n%20de%20Office%20%F0%9F%91%A9%E2%80%8D%F0%9F%92%BC%F0%9F%91%A8%E2%80%8D%F0%9F%92%BC",
+    windows: "Instalacion%20y%20activaci%C3%B3n%20de%20Windows%20%F0%9F%96%A5",
+    arquitectura:
+      "Instalacion%20y%20activaci%C3%B3n%20de%20Programas%20Autodesk%20%F0%9F%93%90",
+    diseno:
+      "Instalacion%20y%20activaci%C3%B3n%20de%20Programas%20Adobe%20%F0%9F%96%8C",
+    antivirus:
+      "Instalacion%20y%20activaci%C3%B3n%20de%20Antivirus%20%F0%9F%91%BE",
+    otros: "Otros%3A%20Me%20gustar%C3%ADa%20consultarte%20sobre...%F0%9F%A4%94",
   };
+
   function convertion(cant) {
     return value ? Math.round((value * cant) / 100) * 100 : cant;
   }
@@ -79,14 +94,18 @@ function App() {
   }, [value]);
 
   const constructWhatsAppMessage = () => {
-    let message = "¡Hola! Me gustaría contratar los siguientes servicios:\n\n";
+    let message =
+      "¡Hola! Me gustaría contratar los siguientes servicios: %0A%0A ";
     for (const key in selectedServices) {
       if (selectedServices[key]) {
-        message += `- ${titles[key]}\n`;
+        message += `- ${titles[key]} %0A `;
       }
     }
-    message += `\nEl total sería de $${total}`;
-    return encodeURIComponent(message);
+    message += `%0A El total sería de $${total}`;
+    // return encodeURIComponent(message);
+    // return encodeURI(message);
+    console.log(message);
+    return message;
   };
 
   const handleServiceChange = (serviceName) => {
@@ -149,7 +168,7 @@ function App() {
             onClick={() => handleServiceChange("disco")}
           >
             <h3>
-              Cambio de Disco + Backup de archivos + Instalación Windows:
+              Cambio de Disco a SSD + Backup de archivos + Instalación Windows:
               <span className="price">
                 {" "}
                 $ {priceServices.disco + (value ? " pesos" : " dólares")}

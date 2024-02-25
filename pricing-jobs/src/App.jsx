@@ -32,8 +32,7 @@ function App() {
   const titles = {
     diagnostico: "Diagnósito de mi PC",
     disco: "Cambio de Disco  + Backup de archivos  + Instalación Windows ",
-    limpieza: "Limpieza Física ",
-    optimizar: "Optimizacion y rendimiento ",
+    limpieza: "Limpieza Física + Optimización ",
     office: "Instalacion y activación de Office ",
     windows: "Instalacion y activación de Windows ",
     arquitectura: "Instalacion y activación de Programas Autodesk",
@@ -42,13 +41,12 @@ function App() {
     otros: "Otros: Me gustaría consultarte sobre...",
   };
   function convertion(cant) {
-    return Math.round((value * cant) / 100) * 100;
+    return value ? Math.round((value * cant) / 100) * 100 : cant;
   }
   const priceServices = {
     diagnostico: convertion(5),
     disco: convertion(10),
-    limpieza: convertion(3),
-    optimizar: convertion(1),
+    limpieza: convertion(4),
     office: convertion(3),
     windows: convertion(2),
     arquitectura: convertion(5),
@@ -81,7 +79,7 @@ function App() {
   }, [value]);
 
   const constructWhatsAppMessage = () => {
-    let message = "¡Hola! Me gustaría contratar los siguientes servicios:\n";
+    let message = "¡Hola! Me gustaría contratar los siguientes servicios:\n\n";
     for (const key in selectedServices) {
       if (selectedServices[key]) {
         message += `- ${titles[key]}\n`;
@@ -119,7 +117,10 @@ function App() {
           <div className="base">
             <h3>
               Diagnóstico base:
-              <span className="price"> $ {priceServices.diagnostico}</span>
+              <span className="price">
+                {" "}
+                $ {priceServices.diagnostico + (value ? " pesos" : " dólares")}
+              </span>
             </h3>
           </div>
         </section>
@@ -134,20 +135,10 @@ function App() {
             onClick={() => handleServiceChange("limpieza")}
           >
             <h3>
-              Limpieza Física:{" "}
-              <span className="price">$ {priceServices.limpieza}</span>
-            </h3>
-          </button>
-        </section>
-
-        <section>
-          <button
-            className={selectedServices.optimizar ? "checked" : ""}
-            onClick={() => handleServiceChange("optimizar")}
-          >
-            <h3>
-              Optimización y Rendimiento:{" "}
-              <span className="price">$ {priceServices.optimizar}</span>
+              Limpieza Física + Optimización:{" "}
+              <span className="price">
+                $ {priceServices.limpieza + (value ? " pesos" : " dólares")}
+              </span>
             </h3>
           </button>
         </section>
@@ -159,7 +150,10 @@ function App() {
           >
             <h3>
               Cambio de Disco + Backup de archivos + Instalación Windows:
-              <span className="price"> $ {priceServices.disco}</span>
+              <span className="price">
+                {" "}
+                $ {priceServices.disco + (value ? " pesos" : " dólares")}
+              </span>
             </h3>
           </button>
         </section>
@@ -173,7 +167,10 @@ function App() {
               onClick={() => handleServiceChange("office")}
             >
               <h5>
-                Office: <span className="price">$ {priceServices.office}</span>
+                Office:{" "}
+                <span className="price">
+                  $ {priceServices.office + (value ? " pesos" : " dólares")}
+                </span>
               </h5>
               <img
                 src="https://i.postimg.cc/Vv2p7tB1/office.png"
@@ -187,7 +184,9 @@ function App() {
             >
               <h5>
                 Windows:{" "}
-                <span className="price">$ {priceServices.windows}</span>
+                <span className="price">
+                  $ {priceServices.windows + (value ? " pesos" : " dólares")}
+                </span>
               </h5>
 
               <img
@@ -204,7 +203,11 @@ function App() {
               <li>
                 <h5>
                   Arquitectura:{" "}
-                  <span className="price">$ {priceServices.arquitectura}</span>
+                  <span className="price">
+                    ${" "}
+                    {priceServices.arquitectura +
+                      (value ? " pesos" : " dólares")}
+                  </span>
                 </h5>
 
                 <img
@@ -221,7 +224,10 @@ function App() {
               <li>
                 <h5>
                   Diseño:
-                  <span className="price"> $ {priceServices.diseno}</span>
+                  <span className="price">
+                    {" "}
+                    $ {priceServices.diseno + (value ? " pesos" : " dólares")}
+                  </span>
                 </h5>
 
                 <img
@@ -237,7 +243,9 @@ function App() {
             >
               <h5>
                 Antivirus (c/u):{" "}
-                <span className="price">$ {priceServices.antivirus}</span>
+                <span className="price">
+                  $ {priceServices.antivirus + (value ? " pesos" : " dólares")}
+                </span>
               </h5>
               <img
                 className="oneLogo"
@@ -250,7 +258,7 @@ function App() {
               className={selectedServices.otros ? "checked" : ""}
               onClick={() => handleServiceChange("otros")}
             >
-              <h5>Otros programas (Consultar)</h5>
+              <h5>Otros (Consultar)</h5>
               <svg
                 fill="#72ff91"
                 version="1.1"

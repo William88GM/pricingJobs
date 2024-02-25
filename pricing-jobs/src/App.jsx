@@ -121,14 +121,16 @@ function App() {
         <h1>
           Servicio Técnico <span className="sanjuan">San Juan</span>
         </h1>
+
         <img
           className="tecnico"
           src="https://i.postimg.cc/4xwjKPW7/tecnico.png"
           alt=""
         />
-        <h6>
-          Por <a href="">Guillermo Martínez</a>
-        </h6>
+        <h3>
+          Reparación de <span className="sanjuan">Computadoras</span>,
+          Instalación de <span className="sanjuan">programas</span> y demás.
+        </h3>
 
         <h3>¡Calculá tu Presupuesto!</h3>
 
@@ -364,6 +366,9 @@ function App() {
               </g>
             </svg>
           </a>
+        </h4>
+        <h4>
+          <a href="">Guillermo Martínez</a>
         </h4>
       </article>
     </>

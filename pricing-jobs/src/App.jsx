@@ -90,7 +90,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setTotal(Math.round((value * 5) / 100) * 100);
+    setTotal(priceServices.diagnostico);
   }, [value]);
 
   const constructWhatsAppMessage = () => {
@@ -315,7 +315,10 @@ function App() {
         </section>
 
         <h3 className="total">
-          TOTAL: <span className="price">$ {total}</span>
+          TOTAL:{" "}
+          <span className="price">
+            $ {total + (value ? " pesos" : " dólares")}
+          </span>
         </h3>
         <h4 className="contact">
           <a

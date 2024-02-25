@@ -68,7 +68,9 @@ img {
     transform: rotate(360deg);
   }
 }
-
+.otros {
+  margin-bottom: 0;
+}
 button {
   box-shadow: 0 0 30px 10px #6dc5ff10;
 }

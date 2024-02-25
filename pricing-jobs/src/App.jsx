@@ -279,7 +279,7 @@ function App() {
               className={selectedServices.otros ? "checked" : ""}
               onClick={() => handleServiceChange("otros")}
             >
-              <h5>Otros (Consultar)</h5>
+              <h5 className="otros">Otros (Consultar)</h5>
               <svg
                 fill="#72ff91"
                 version="1.1"

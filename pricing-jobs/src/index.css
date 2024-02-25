@@ -90,18 +90,7 @@ section {
 .checked {
   border: 2px solid #64ffff;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #424af3;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
 .contact {
   margin-bottom: 30px;
 }

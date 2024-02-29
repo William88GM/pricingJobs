@@ -40,7 +40,7 @@ function App() {
   const titles = {
     diagnostico: "Diagn%C3%B3sito%20de%20mi%20PC%20%F0%9F%94%8D",
     disco:
-      "Cambio%20de%20Disco%20a%20SSD%20%F0%9F%92%BF%20%2B%20Backup%20de%20archivos%20%F0%9F%97%83%20%2B%20Instalaci%C3%B3n%20Windows%20%F0%9F%96%A5",
+      "Cambio%20de%20Disco%20a%20SSD%20%F0%9F%92%BF%20%28Comprado%20previamente%20por%20el%20cliente%29%20%2B%20Backup%20de%20archivos%20%F0%9F%97%83%20%2B%20Instalaci%C3%B3n%20Windows%20%F0%9F%96%A5%0A",
     limpieza:
       "Limpieza%20F%C3%ADsica%20%F0%9F%A7%B9%20%2B%20Optimizaci%C3%B3n%20%F0%9F%9A%80",
     office:

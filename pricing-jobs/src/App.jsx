@@ -124,8 +124,8 @@ function App() {
 
         <img
           className="tecnico"
-          src="https://i.postimg.cc/4xwjKPW7/tecnico.png"
-          alt=""
+          src="https://i.postimg.cc/yYgMnHMQ/logo.png"
+          alt="Logo page"
         />
         <h3>
           Reparación de <span className="sanjuan">Computadoras</span>,
@@ -135,6 +135,7 @@ function App() {
           No hacemos reparaciones físicas de Hardware, electrónica o cambios de
           pantalla
         </p>
+
         <h3>¡Calculá tu Presupuesto!</h3>
 
         <section>

@@ -131,13 +131,16 @@ function App() {
           Reparación de <span className="sanjuan">Computadoras</span>,
           Instalación de <span className="sanjuan">programas</span> y demás.
         </h3>
-
+        <p>
+          No hacemos reparaciones físicas de Hardware, electrónica o cambios de
+          pantalla
+        </p>
         <h3>¡Calculá tu Presupuesto!</h3>
 
         <section>
           <div className="base">
             <h3>
-              Diagnóstico base:
+              Precio base por consulta:
               <span className="price">
                 {" "}
                 $ {priceServices.diagnostico + (value ? " pesos" : " dólares")}

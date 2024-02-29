@@ -68,6 +68,9 @@ img {
     transform: rotate(360deg);
   }
 }
+.tecnico {
+  border-radius: 50%;
+}
 .otros {
   margin-bottom: 0;
 }

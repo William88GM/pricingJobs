@@ -9,6 +9,9 @@ article {
   justify-content: center;
   align-items: center;
 }
+.twoLines {
+  margin-bottom: 2px;
+}
 .base h3 {
   padding: 10px;
   margin: 0;
@@ -18,10 +21,15 @@ article {
 }
 .cards {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
 }
 .cards button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   min-width: 230px;
 }
 button {

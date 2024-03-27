@@ -52,7 +52,8 @@ function App() {
       "Instalacion%20y%20activaci%C3%B3n%20de%20Programas%20Adobe%20%F0%9F%96%8C",
     antivirus:
       "Instalacion%20y%20activaci%C3%B3n%20de%20Antivirus%20%F0%9F%91%BE",
-    desbloqueo: "",
+    desbloqueo:
+      "Desbloqueo%20de%20computadora%20Conectar%20Igualdad%20%F0%9F%92%BB",
     otros: "Otros%3A%20Me%20gustar%C3%ADa%20consultarte%20sobre...%F0%9F%A4%94",
   };
 

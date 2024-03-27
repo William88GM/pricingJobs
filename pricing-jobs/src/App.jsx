@@ -422,7 +422,13 @@ function App() {
           </a>
         </h4>
         <h4>
-          <a href="">Guillermo Martínez</a>
+          <span>Creado por: </span>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/guillermo-martinez-barros/"
+          >
+            Guillermo Martínez
+          </a>
         </h4>
       </article>
     </>

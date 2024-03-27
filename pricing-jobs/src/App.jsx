@@ -69,7 +69,7 @@ function App() {
     arquitectura: convertion(5),
     diseno: convertion(5),
     antivirus: convertion(1),
-    desbloqueo: convertion(5),
+    desbloqueo: convertion(10),
     otros: convertion(0),
   };
 

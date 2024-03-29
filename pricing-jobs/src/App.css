@@ -3,6 +3,9 @@
   margin: 0 auto;
   text-align: center;
 }
+body {
+  padding: 20px;
+}
 article {
   display: flex;
   flex-direction: column;

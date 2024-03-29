@@ -290,7 +290,7 @@ function App() {
               <h5 className="twoLines">
                 Debloqueo de Equipos {" Conectar Igualdad"}:{" "}
                 <span className="price">
-                  ${priceServices.antivirus + (value ? " pesos" : " dólares")}
+                  ${priceServices.desbloqueo + (value ? " pesos" : " dólares")}
                 </span>
               </h5>
               {/* <img
